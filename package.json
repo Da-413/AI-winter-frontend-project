@@ -2,6 +2,7 @@
   "name": "frontend",
   "version": "1.0.0",
   "scripts": {
+    "postinstall": "chmod +x ./node_modules/.bin/parcel",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "rm -rf dist .parcel-cache && parcel serve index.html",
     "build": "rm -rf dist .parcel-cache && parcel build index.html --public-url .",
