@@ -106,7 +106,7 @@ function scrollToBottom() {
 // Simulate assistant response with backend integration
 async function getAssistantResponse(userMessage) {
     try {
-        const response = await fetch("http://localhost:8000/findword", {
+        const response = await fetch("https://ssafy-2024-backend-wispy-wind-8823.fly.dev/findword", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
