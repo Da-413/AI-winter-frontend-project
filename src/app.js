@@ -4,7 +4,7 @@ const userInput = document.getElementById("user-input");
 const articleContent = document.getElementById("article-content");
 const articleSection = document.getElementById("article-section");
 const newChatBtn = document.getElementById("new-chat-btn");
-
+const BASE_URL = process.env.API_ENDPOINT;
 
 // Create a message bubble
 function createMessageBubble(content, sender = "user") {
@@ -106,7 +106,7 @@ function scrollToBottom() {
 // Simulate assistant response with backend integration
 async function getAssistantResponse(userMessage) {
     try {
-        const response = await fetch("https://ssafy-2024-backend-wispy-wind-8823.fly.dev/findword", {
+        const response = await fetch(`${BASE_URL}/findword`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
